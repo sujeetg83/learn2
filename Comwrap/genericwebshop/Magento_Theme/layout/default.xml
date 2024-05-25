@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo_en-2000.png</argument>
+                <argument name="logo_img_width" xsi:type="number">50</argument>
+                <argument name="logo_img_height" xsi:type="number">50</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Store\Block\Switcher" name="language" template="Magento_Store::switch/stores.phtml" />
+        </referenceContainer>
+        <move element="navigation.sections" destination="header-wrapper" after="top.search" />
+        <!-- <move element="store_language" destination="footer-wrapper" after="-" /> -->
+        <!-- <move element="currency" destination="header-wrapper"  after="help"  /> -->
+        <!-- <referenceBlock name="top.search"  remove="false" />
+        
+        <move element="header.links" destination="header-wrapper" after="-" />
+        <move element="catalog.compare.link" destination="header-wrapper" after="minicart" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="footer_links" remove="true" /> -->
+        <!-- <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
+                    <argument name="class" xsi:type="string" translate="true">action secondary</argument>
+                </arguments>
+            </block>
+        </referenceBlock> -->
+        <!-- <move element="faq-link" destination="header-wrapper" after="minicart" />  -->
+
+        <!-- <move element="store_language" destination="header-wrapper" after="minicart" />  -->
+        <!-- <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_section" after="-">
+                <arguments>
+                  <argument name="block_id" xsi:type="string">footer-set</argument>
+                </arguments>
+            </block>
+        </referenceContainer> -->
+        <!-- <referenceContainer name="content">
+            <referenceBlock name="authentication-popup" remove="true"/>
+        </referenceContainer>  -->
+        <!-- <move element="store_language" destination="header.panel" before="-" /> -->
+        <!-- <move element="page.messages" destination="header.container" before="-"/> -->
+    </body>
+</page>
